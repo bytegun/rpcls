@@ -31,9 +31,11 @@ const projectId = process.env.NEXT_PUBLIC_PROJECT_ID
   ? process.env.NEXT_PUBLIC_PROJECT_ID
   : "";
 
+const projectName = process.env.NEXT_PUBLIC_PROJECT_NAME ?? "";
+
 const connectors = connectorsForWallets([
   ...getDefaultWallets({
-    appName: "SURVIVERSE_NFT",
+    appName: projectName,
     projectId: projectId,
     chains,
   }).wallets,
